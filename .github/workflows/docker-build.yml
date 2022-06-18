@@ -47,7 +47,7 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
-      - run: docker build . -f Dockfile -t waylonwalker/markata:${{ matrix.version }}
+      - run: docker build . -f Dockerfile -t waylonwalker/markata:${{ matrix.version }}
 
       - name: Build and push
         id: docker_build
