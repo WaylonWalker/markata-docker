@@ -16,7 +16,8 @@ jobs:
       - name: Generate Matrix
         id: generate-matrix
         run: |
-          echo "::set-output name=VERSIONS::[$(pip index versions markata | grep "Available versions:" | sed "s/Available versions://")]"
+          echo "::set-env name=VERSION::[$(pip index versions markata | grep "Available versions:" | sed "s/Available versions://" | sed "s/[^ ][^ ]*/'&'/g")]"
+
   build:
     runs-on: ubuntu-latest
     needs: 
