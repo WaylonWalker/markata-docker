@@ -17,7 +17,7 @@ jobs:
         id: generate-matrix
         run: |
           VERSIONS=`pip index versions markata | grep "Available versions:" | sed "s/Available versions://" | sed 's/[^ ][^ ]*/"&"/g'`
-          echo "::set-output name=VERSION::[$VERSIONS]"
+          echo "::set-output name=VERSIONS::[$VERSIONS]"
 
   build:
     runs-on: ubuntu-latest
