@@ -47,9 +47,9 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
-      - run: docker build . -f Dockerfile -t waylonwalker/markata:${{ matrix.version }}
+      - run: docker build . -f Dockerfile -t ${{ secrets.DOCKERHUB_USERNAME }}/markata:${{ matrix.version }}
 
-      - run: docker push waylonwalker/markata:${{ matrix.version }}
+      - run: docker push ${{ secrets.DOCKERHUB_USERNAME }}/markata:${{ matrix.version }}
 
   build-latest:
     runs-on: ubuntu-latest
@@ -73,7 +73,7 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
-      - run: docker build . -f Dockerfile -t waylonwalker/markata:latest
+      - run: docker build . -f Dockerfile -t ${{ secrets.DOCKERHUB_USERNAME }}/markata:latest
 
-      - run: docker push waylonwalker/markata:latest
+      - run: docker push ${{ secrets.DOCKERHUB_USERNAME }}/markata:latest
 
