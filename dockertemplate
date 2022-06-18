@@ -1,0 +1,3 @@
+From python:slim
+pip install markata==${VERSION}
+ENTRYPOINT ["markata"]
