@@ -23,7 +23,7 @@ jobs:
       - generate_matrix
     strategy:
       matrix:
-        version: ${{ needs.generate_matrix.outputs.VERSIONS }}
+        version: ${{ fromJson(needs.generate_matrix.outputs.VERSIONS) }}
     steps:
       - uses: actions/checkout@v3
 
