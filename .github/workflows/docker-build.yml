@@ -21,7 +21,7 @@ jobs:
       - generate_matrix
     strategy:
       matrix:
-        version: ${{ jobs.generate-matrix.env.VERSIONS }}
+        version: ${{ generate-matrix.env.VERSIONS }}
     steps:
       - uses: actions/checkout@v3
 
