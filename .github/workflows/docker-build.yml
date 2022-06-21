@@ -32,7 +32,7 @@ jobs:
       - name: Generate Dockerfile
         run: |
           export VERSION=${{ matrix.version }}
-          envsubst < dockertemplate > Dockerfile
+          envsubst '${VERSION}' < dockertemplate > Dockerfile
 
       - run: cat Dockerfile
       - run: ls
@@ -58,7 +58,7 @@ jobs:
       - name: Generate Dockerfile
         run: |
           # the template leaves a trailing == if version is not supplied, delete it.
-          envsubst < dockertemplate | sed 's/==//'> Dockerfile
+          envsubst '${VERSION}' < dockertemplate | sed 's/==//'> Dockerfile
 
       - run: cat Dockerfile
       - run: ls
