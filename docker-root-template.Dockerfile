@@ -1,5 +1,6 @@
 From python:slim
 
+RUN apt install git -y
 RUN pip install markata==${VERSION}
 
 WORKDIR /src
