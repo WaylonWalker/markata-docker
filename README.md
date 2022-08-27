@@ -1,6 +1,6 @@
 # Markata Docker
 
-`markta-docker` builds [markata](markata.dev) containers so that you can build
+`markta-docker` builds [markata](https://markata.dev) containers so that you can build
 your markata site by installing no more than just docker on your system.
 
 ## Build your site using markata docker
