@@ -1,4 +1,4 @@
-From python:slim
+From python:3.11.0rc2-slim
 
 RUN apt update && apt install git -y
 RUN pip install markata==${VERSION}
