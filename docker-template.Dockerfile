@@ -1,4 +1,4 @@
-From python:slim
+From python:3-slim-bullseye
 
 # Setup markata user so that docker build does not create files owned by root
 ARG MARKATA_UID=1000
