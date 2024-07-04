@@ -1,4 +1,4 @@
-From python:slim
+From python:3.12.4-slim-bookworm
 
 RUN apt update && apt install git -y
 RUN pip install markata==${VERSION}
